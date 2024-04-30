@@ -80,8 +80,16 @@ colPerc(table1)
 
 In the top graph, if you were infected with covid19 then 34.99% were getting the drug and 65.01% were getting the placebo. If the drug was not effective then the number would be about 50-50. Since the placebo was at a higher percentage it is effective.
 
+## Inferential Results 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 
+With the information above the P-value is 0.000000000000002178 which is <0.05 however we do not fail to reject due to the fact that if the vaccine was not effective then the numbers would be about 50% and 50%. In our case the vaccine was effective therefore we fail to reject the null hypothesis.
 
 ## Females
 
