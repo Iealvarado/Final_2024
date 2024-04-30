@@ -70,6 +70,18 @@ barchartGC(~infected + treatment,data=FinalData, type="percent")
 By looking at the graph there is a difference between the vaccine and placebo. Looking at the graph the placebo is more effective then the Covid vaccine.
 
 
+### Numerical discriptive results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=FinalData)
+rowPerc(table1)
+colPerc(table1)
+```
+
+In the top graph, if you were infected with covid19 then 34.99% were getting the drug and 65.01% were getting the placebo. If the drug was not effective then the number would be about 50-50. Since the placebo was at a higher percentage it is effective.
+
+
+
 
 ## Females
 
