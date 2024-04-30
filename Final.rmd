@@ -31,15 +31,43 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 # Introduction 
 
-$h_0$ There is a difference on effectiveness based on sex
+$h_0$ There is a difference on effectiveness in the vaccine based on your sex, if you are LGBTQ, or a drug user 
 
-$h_A$ There is not a difference on effectiveness on sex 
-
-
-## Males
+$h_A$ There is not a difference on effectiveness in the vaccine based on sex, if you are LGBTQ, or a drug user 
 
 
+# Methods
 
+Variable we use are:
+
+treatment - Categorical
+
+male- Categorical
+
+infected - Categorical
+
+Infected depends on treatment among male
+
+We get just the male from the population
+
+# Results
+
+## Male
+ 
+### Graphical Discriptive Results  
+ 
+```{r}
+levels(FinalData$sex)
+dataG = filter(FinalData,sex=="male")
+
+barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~infected + treatment,data=FinalData, type="percent")
+
+```
+
+
+
+By looking at the graph there is a difference between the vaccine and placebo. Looking at the graph the placebo is more effective then the Covid vaccine.
 
 
 
