@@ -91,6 +91,12 @@ fisher.test(table1)
 
 With the information above the P-value is 0.000000000000002178 which is <0.05 however we do not fail to reject due to the fact that if the vaccine was not effective then the numbers would be about 50% and 50%. In our case the vaccine was effective therefore we fail to reject the null hypothesis.
 
+
+## Discussion/Conclusion
+
+IN conclusion the Vaccine is effective on men. And we will fail to reject the hypothesis.
+
+
 ## Females
 
 
