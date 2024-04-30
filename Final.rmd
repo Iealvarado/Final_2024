@@ -31,9 +31,9 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 # Introduction 
 
-$h_0$ There is a difference on effectiveness in the vaccine based on your sex, if you are LGBTQ, or a drug user 
+$h_0$ The new preventative vaccine for covid effective for men.
 
-$h_A$ There is not a difference on effectiveness in the vaccine based on sex, if you are LGBTQ, or a drug user 
+$h_A$ The new preventative vaccine for covid is not effective for men.
 
 
 # Methods
