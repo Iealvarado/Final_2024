@@ -79,7 +79,7 @@ colPerc(table1)
 ```
 
 
-In the top graph, if you were infected with covid19 then 34.99% were getting the drug and 65.01% were getting the placebo. If the drug was not effective then the number would be about 50-50. Since the placebo was at a higher percentage it is effective
+In the top graph, if you were infected with covid19 then 34.99% were getting the vaccine and 65.01% were getting the placebo. If the drug was not effective then the number would be about 50-50. Since the placebo was at a higher percentage it is effective
 
 
 
@@ -151,7 +151,7 @@ colPerc(table1)
 ```
 
 
-In the top graph, if you were infected with covid19 then 34.99% were getting the drug and 65.01% were getting the placebo. If the drug was not effective then the number would be about 50-50. Since the placebo was at a higher percentage it is effective.
+In the top graph, if you were infected with covid19 then 34.99% were getting the vaccine and 65.01% were getting the placebo. If the drug was not effective then the number would be about 50-50. Since the placebo was at a higher percentage it is effective.
 
 
 ### Inferential Results
@@ -171,6 +171,73 @@ Similar to the males With the information above the P-value is 0.000000000000002
 In conclusion the vaccine is effective on females as well. And we will fail to reject the hypothesis.
 
 ## LGBTQ
+
+### Introduction
+
+$h_0$ The new preventative vaccine for covid effective for LGBTQ.
+
+$h_A$ The new preventative vaccine for covid is not effective for LGBTQ.
+
+
+### Methods
+
+Variable we use are:
+
+treatment - Categorical
+
+LGBTQ- Categorical
+
+infected - Categorical
+
+Infected depends on treatment among male
+
+We get just the male from the population
+
+
+### Graphical Descriptive Results
+
+```{r}
+levels(FinalData$LGBTG)
+dataG = filter(FinalData,LGBTQ=="gay")
+
+barchartGC(~infected + treatment,data=dataG)
+barchartGC(~infected + treatment,data=dataG, type="percent")
+
+```
+
+
+By looking at the graph there is a difference between the vaccine and placebo. Looking at the graph the vaccine is more effective then the placebo.
+
+
+
+### Numerical Descriptive Results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=dataG)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+In the top graph, if you were infected with covid19 then 84.62% were getting the vaccine and 15.38% were getting the placebo. If the vaccine was not effective then the number would be about 50-50. Since the vaccine was at a higher percentage it is effective.
+
+
+### Inferential Descriptive Results
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+With the information above the P-value is 0.00000006668 which is <0.05 however we do not fail to reject due to the fact that if the vaccine was not effective then the numbers would be about 50% and 50%. In our case the vaccine was effective therefore we fail to reject the null hypothesis.
+
+
+### Discussion/ Conclusion
+
+
+In conclusion the vaccine is effective on LGBTQ as well. And we will fail to reject the hypothesis.
 
 
 
