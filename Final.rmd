@@ -54,7 +54,7 @@ We get just the male from the population
 
 ## Male
  
-### Graphical Discriptive Results  
+### Graphical Descriptive Results  
  
 ```{r}
 levels(FinalData$sex)
@@ -97,7 +97,45 @@ With the information above the P-value is 0.000000000000002178 which is <0.05 ho
 IN conclusion the Vaccine is effective on men. And we will fail to reject the hypothesis.
 
 
+
+
+
 ## Females
+
+
+### Introduction
+
+$h_0$ The new preventative vaccine for covid effective for female.
+
+$h_A$ The new preventative vaccine for covid is not effective for female.
+
+### Methods
+
+Variable we use are:
+
+treatment - Categorical
+
+female- Categorical
+
+infected - Categorical
+
+Infected depends on treatment among male
+
+We get just the male from the population
+
+
+### Graphical Descriptive Results 
+
+```{r}
+levels(FinalData$sex)
+dataG = filter(FinalData,sex=="female")
+
+barchartGC(~infected + treatment,data=FinalData)
+barchartGC(~infected + treatment,data=FinalData, type="percent")
+
+```
+
+
 
 
 ## LGBTQ
