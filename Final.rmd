@@ -324,4 +324,5 @@ IN conclusion the Vaccine is effective on men. And we will fail to reject the hy
 
 # Overall Results and Conclusions
 
+Does the effectiveness of the vaccine differ based on subpopulation? Looking back at the data almost all have the same result except for LGBTQ; when it came to sex, and drug users the placebo was the most effective and for LGBTQ the vaccine was the most effective. however since it was effective for all we reject the null hypothesis since there is not a difference on effectiveness in the vaccine based on male, female, LGBTQ or a drug user.
 
